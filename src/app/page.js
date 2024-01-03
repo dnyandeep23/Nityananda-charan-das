@@ -138,11 +138,11 @@ export default function Home() {
           </div>
         </section>
         <div className="p-10">
-          <p className="font-bold text-2xl xl:px-12 px-2">
+          <p className="font-bold text-2xl xl:px-5 sm:px-2 md:px-5 ">
             What to expect from the course
           </p>
 
-          <div className="  text-xl xl:px-12 px-2">
+          <div className="  text-xl xl:px-8 px-2">
             {data.course.what_to_expect.html_content.map((item, index) => {
               return (
                 <li className="my-2 flex flex-col text-start " key={index}>
@@ -157,11 +157,11 @@ export default function Home() {
           </div>
           { }
         </div>
-        <div className="flex flex-col items-start w-full md:w-[65%] px-4 md:px-10">
+        <div className="flex flex-col items-start w-full md:w-[65%] px-4 md:px-6 xl:px-6">
           <h2 className="text-2xl font-bold mx-4 md:mx-10 my-3">
             Key topics covered
           </h2>
-          <p className="mx-4 mb-10 md:mx-10">
+          <p className="mx-4 mb-10 md:mx-10 px-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
             blanditiis aut tenetur amet natus dolorum numquam quam a
             exercitationem? Ex numquam vel a eligendi non unde laborum ipsa.
@@ -170,7 +170,7 @@ export default function Home() {
             exercitationem dolorem possimus, delectus odit soluta? Deserunt,
             numquam necessitatibus.
           </p>
-          <ul className="flex flex-col mx-4 md:mx-10 mb-4">
+          <ul className="flex flex-col mx-4 md:mx-10 mb-4 px-4">
             {data.course.key_topics.html_content.map((item, index) => (
               <li className="mb-4 flex items-center" key={index}>
                 <div>
