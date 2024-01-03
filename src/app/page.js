@@ -13,7 +13,6 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import TextCarousel from "./crousel";
 import { useState, useEffect } from "react";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
@@ -72,7 +71,7 @@ export default function Home() {
               <ul className="font-sans text-lg font-semibold border-b-4 border-purple-600">
                 About
               </ul>
-              <ul className="font-sans text-lg font-semibold  ">Instructor</ul>
+              <ul className="font-sans text-lg font-semibold  "> <a href="#review"> Instructor</a></ul>
               <ul className="font-sans text-lg font-semibold ">Review</ul>
             </div>
             <h1 className="px-0 md:px-10 xl:px-10 pt-14 text-2xl font-bold ">
@@ -252,7 +251,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-[30rem] w-full bg-slate-100 overflow-hidden relative p-10 ">
+        <div className="h-[30rem] w-full bg-slate-100 overflow-hidden relative p-10 " id="review">
           <div className="mx-auto mt-10 xl:px-32  ">
             <p className="text-2xl md:text-3xl xl:text-4xl  font-bold font-sans text-center">
               " {data.testimonial.text} "
