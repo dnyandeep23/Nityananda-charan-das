@@ -28,7 +28,6 @@ export default function Home() {
   // useClient();
 
   const data = jsondata;
- 
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
