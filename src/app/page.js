@@ -3,6 +3,7 @@
 import Image from "next/image";
 import im from "../Assets/img.png";
 import profile from "../Assets/profile.jpg";
+import profilePerson from "../Assets/profile_person.png";
 import { Poppins } from "next/font/google";
 import jsondata from "../Assets/data.json";
 import { MdOndemandVideo } from "react-icons/md";
@@ -36,7 +37,7 @@ export default function Home() {
             quality={100}
           />
           <div className="absolute  bg-black bg-opacity-50 w-full h-full ">
-            <div className="absolute bottom-0 left-0 p-5 w-full pb-10 xl:pb-5 xl:w-[65%] md:w-full sm:w-full">
+            <div className="absolute bottom-0 left-0 p-5 w-full pb-12 xl:pb-5 xl:w-[65%] md:w-full sm:w-full">
               <div className={pop.className}>
                 <h2 className="text-xl md:text-2xl xl:text-3xl  text-white font-medium uppercase font-sans pb-4">
                   {data.instructor.name}
@@ -243,7 +244,7 @@ export default function Home() {
             <div className="flex justify-center items-center mt-16">
               <div className="relative rounded-full overflow-hidden w-12 h-12">
                 <Image
-                  src={profile}
+                  src={profilePerson}
                   width={250}
                   height={250}
                   alt="titleImage"
