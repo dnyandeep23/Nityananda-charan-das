@@ -54,7 +54,7 @@ export default function Home() {
           />
           <div className="absolute  bg-black bg-opacity-50 w-full h-full ">
             <div className="absolute bottom-0 left-0 p-5 w-full pb-10 xl:pb-5 xl:w-[65%] md:w-full sm:w-full">
-              <div className={pop.className}>
+              <div className="">
                 <h2 className="text-xl md:text-2xl xl:text-3xl  text-white font-medium uppercase font-sans pb-4">
                   {data.instructor.name}
                 </h2>
