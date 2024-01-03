@@ -82,12 +82,12 @@ export default function Home() {
             </p>
           </div>
           <div className="relative w-screen">
-            <div className="absolute -top-12 xl:right-4 md:right-4 right-0 w-screen rpt  flex flex-row  justify-center xl:justify-end md:justify-self-center">
+            <div className="absolute -top-16 xl:right-4 md:right-4 right-0 w-screen rpt  flex flex-row  justify-center xl:justify-end md:justify-self-center">
               <div className="m-4 bg-purple-100 p-10 w-96 rounded-md ">
                 <div>
                   <p className="font-semibold text-lg">Course fees</p>
                   <p className="text-4xl font-bold font-serif ">
-                     <p>₹</p> {data.course.fee.amount}
+                     ₹ {data.course.fee.amount}
                   </p>
                 </div>
                 <div className="pt-5">
