@@ -13,7 +13,6 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { useState, useEffect } from "react";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
 const pop = Poppins({
@@ -29,17 +28,6 @@ export default function Home() {
   const data = jsondata;
 
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextItem = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % data.testimonial.length);
-  };
-
-  useEffect(() => {
-    const intervalId = setInterval(nextItem, 3000);
-
-    return () => clearInterval(intervalId);
-  }, [currentIndex]);
 
   return (
     <>
