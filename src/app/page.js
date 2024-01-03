@@ -81,7 +81,7 @@ export default function Home() {
               voluptates accusantium.
             </p>
           </div>
-          <div children="relative w-screen">
+          <div className="relative w-screen">
             <div className="absolute -top-12 xl:right-4 md:right-4 right-0 w-screen rpt  flex flex-row  justify-center xl:justify-end md:justify-self-center">
               <div className="m-4 bg-purple-100 p-10 w-96 rounded-md ">
                 <div>
