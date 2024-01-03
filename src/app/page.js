@@ -91,7 +91,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="pt-5">
-                  <p className="font-semibold text-lg">What's included:</p>
+                  <p className="font-semibold text-lg">What&apos;s included:</p>
                   <div className="px-4 pb-5 ">
                     <div className="flex items-center gap-3 pb-2 pt-2">
                       {" "}
@@ -237,7 +237,7 @@ export default function Home() {
         <div className="h-[30rem] w-full bg-slate-100 overflow-hidden relative p-10 " id="review">
           <div className="mx-auto mt-10 xl:px-32  ">
             <p className="text-2xl md:text-3xl xl:text-4xl  font-bold font-sans text-center">
-              " {data.testimonial.text} "
+              &quot; {data.testimonial.text} &quot;
             </p>
 
             <div className="flex justify-center items-center mt-16">
