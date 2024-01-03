@@ -23,12 +23,7 @@ const pop = Poppins({
 });
 
 export default function Home() {
-  // useClient();
-
   const data = jsondata;
-
-
-
   return (
     <>
       <div>
@@ -92,7 +87,7 @@ export default function Home() {
                 <div>
                   <p className="font-semibold text-lg">Course fees</p>
                   <p className="text-4xl font-bold font-serif ">
-                    ₹ {data.course.fee.amount}
+                     <p>₹</p> {data.course.fee.amount}
                   </p>
                 </div>
                 <div className="pt-5">
@@ -101,7 +96,7 @@ export default function Home() {
                     <div className="flex items-center gap-3 pb-2 pt-2">
                       {" "}
                       <MdOndemandVideo />{" "}
-                      {data.course.inclusions.on_demand_videos} on-demand videos
+                      {data.course.inclusions.on_demand_videos} <p> on-demand videos</p>
                     </div>
                     <div className="flex items-center gap-3 pb-2">
                       {data.course.inclusions.whatsapp_community ? (
