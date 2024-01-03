@@ -26,7 +26,7 @@ const pop = Poppins({
   display: "swap",
 });
 
-export default function Page() {
+export default function Home() {
   // useClient();
 
   const data = jsondata;
