@@ -25,6 +25,15 @@ const pop = Poppins({
 
 export default function Home() {
   const data = jsondata;
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 70, // Adjust this offset based on your layout
+        behavior: 'smooth',
+      });
+    }
+  };
   return (
     <>
       <div>
@@ -37,7 +46,7 @@ export default function Home() {
             quality={100}
           />
           <div className="absolute  bg-black bg-opacity-50 w-full h-full ">
-            <div className="absolute bottom-0 left-0 p-5 w-full pb-12 xl:pb-5 xl:w-[65%] md:w-full sm:w-full">
+            <div className="absolute bottom-0 left-0 px-5 w-full pb-20 xl:pb-5 xl:w-[65%] md:w-full sm:w-full">
               <div className={pop.className}>
                 <h2 className="text-xl md:text-2xl xl:text-3xl  text-white font-medium uppercase font-sans pb-4">
                   {data.instructor.name}
@@ -49,14 +58,18 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="relative flex flex-row md:flex-col-reverse sm:flex-col-reverse ">
+        <section className="relative flex flex-row md:flex-col-reverse sm:flex-col-reverse " id="about">
           <div className="lpt xl:w-[65%] md:w-full sm:w-full mt-96 md:mt-96 sm:mt-96 xs:mt-96 xl:mt-0 p-10 md:p-6 sm:p-2">
             <div className="flex xl:px-10 md:px-10 px-2 justify-between">
-              <ul className="font-sans text-lg font-semibold border-b-4 border-purple-600">
-                About
+              <ul className="font-sans text-lg font-semibold border-b-4 px-2 md:px-4 xl:px-12 focus:border-purple-700 border-purple-700 border-spacing-y-7">
+                <a href="#about" onClick={() => { scrollToSection(about) }}>About</a>
               </ul>
-              <ul className="font-sans text-lg font-semibold  "> <a href="#review"> Instructor</a></ul>
-              <ul className="font-sans text-lg font-semibold ">Review</ul>
+              <ul className="font-sans text-lg font-semibold  focus:border-b-4 px-2 md:px-4 xl:px-12 focus:border-purple-600 z-50">
+                <a href="#instructor" onClick={()=>{scrollToSection(instructor)}}>Instructor</a>
+              </ul>
+              <ul className="font-sans text-lg font-semibold focus:border-b-4 px-2 md:px-4 xl:px-12 focus:border-purple-600 z-50">
+                <a href="#review" onClick={() => { scrollToSection(review) }}>Review</a>
+              </ul>
             </div>
             <h1 className="px-0 md:px-10 xl:px-10 pt-14 text-2xl font-bold ">
               About the Course
@@ -88,7 +101,7 @@ export default function Home() {
                 <div>
                   <p className="font-semibold text-lg">Course fees</p>
                   <p className="text-4xl font-bold font-serif ">
-                     ₹ {data.course.fee.amount}
+                    ₹ {data.course.fee.amount}
                   </p>
                 </div>
                 <div className="pt-5">
@@ -123,20 +136,20 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <div className="p-10">
           <p className="font-bold text-2xl xl:px-12 px-2">
             What to expect from the course
           </p>
 
-          <div className="  text-xl xl:px-12 px-4">
+          <div className="  text-xl xl:px-12 px-2">
             {data.course.what_to_expect.html_content.map((item, index) => {
               return (
                 <li className="my-2 flex flex-col text-start " key={index}>
                   <div className="flex flex-row items-center">
                     <FaCheck />
 
-                    <span className=" pl-5 text-start ">{item}</span>
+                    <span className=" pl-5 text-sm md:text-base xl:text-base ">{item}</span>
                   </div>
                 </li>
               );
@@ -159,17 +172,17 @@ export default function Home() {
           </p>
           <ul className="flex flex-col mx-4 md:mx-10 mb-4">
             {data.course.key_topics.html_content.map((item, index) => (
-              <li className="mb-4 flex items-start" key={index}>
+              <li className="mb-4 flex items-center" key={index}>
                 <div>
                   <FaCheck size={20} />
                 </div>
-                <p className="pl-5">{item}</p>
+                <p className="pl-5 text-sm md:text-base xl:text-base " >{item}</p>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="p-10">
+        <section className="p-4" id="instructor">
           <p className="text-2xl font-bold xl:mx-10 ">About the Instructor</p>
           <div className="relative xl:h-96  m-10 overflow-y-hidden flex items-center mx-auto justify-center flex-col md:flex-row sm:flex-row">
             <div className="w-60 mb-4 md:mb-0">
@@ -234,7 +247,7 @@ export default function Home() {
               )}
             </div>
           </div>
-        </div>
+        </section>
         <div className="h-[30rem] w-full bg-slate-100 overflow-hidden relative p-10 " id="review">
           <div className="mx-auto mt-10 xl:px-32  ">
             <p className="text-2xl md:text-3xl xl:text-4xl  font-bold font-sans text-center">
@@ -274,6 +287,7 @@ export default function Home() {
             </button>
           </div>
         </div>
+       
       </div>
     </>
   );
