@@ -14,8 +14,6 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import TextCarousel from "./crousel";
-// import { useClient } from "next/client";
-// import { useClient } from "react-server-components";
 import { useState, useEffect } from "react";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
